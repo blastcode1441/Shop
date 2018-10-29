@@ -36,5 +36,72 @@ client.on('message', message => {
     }
     });
 
+client.on('message', message => {
+	var prefix = "$"
+if(message.author.bot) return;
+    if(message.content === prefix + 'role') {
+                         if(!message.channel.guild) return message.channel.send('**._.**'); 
+         if(!message.member.hasPermission('MANAGE_ROLES')) return    message.channel.send('**ماعند البرمشن المطلوب**').then(msg => msg.delete(6000))
+      message.guild.createRole({
+                  name: "✵- Owner",
+                    color: "#000000",
+                    permissions: []
+     })
+           message.guild.createRole({
+                  name: "✵- Co_Owner",
+                    color: "#000000",
+                    permissions: []
+     })
+                message.guild.createRole({
+                  name: "✵- Admin",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- MOD",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- Founder",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- Helper",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- VIP+",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- VIP",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- Event",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- Member",
+                    color: "#000000",
+                    permissions: []
+     })
+                     message.guild.createRole({
+                  name: "✵- Bots",
+                    color: "#000000",
+                    permissions: []
+     })
+
+
+          message.channel.sendMessage({embed: new Discord.RichEmbed()
+     .setColor('#28ff00').setAuthor(`${message.author.username}'`, message.author.avatarURL).setDescription('**تـمــت المـهـمـة**')});
+    }
+	});
 
 client.login(process.env.BOT_TOKEN);
