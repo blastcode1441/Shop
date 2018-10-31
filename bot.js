@@ -21,6 +21,7 @@ client.on('message', message => {
     if (message.content === prefix + 'create') {
         if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
                 if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
+                message.guild.createChannel("𝑻𝑬𝑿𝑻𝑺 - سوالف", "category");
          message.guild.createChannel('✵-「news', 'text')
          message.guild.createChannel('✵-「chat', 'text')
          message.guild.createChannel('✵-「commands', 'text')
@@ -51,7 +52,6 @@ if(message.author.bot) return;
     if(message.content === prefix + 'role') {
                          if(!message.channel.guild) return message.channel.send('**._.**'); 
          if(!message.member.hasPermission('MANAGE_ROLES')) return    message.channel.send('**ماعند البرمشن المطلوب**').then(msg => msg.delete(6000))
-                message.guild.createChannel("𝑻𝑬𝑿𝑻𝑺 - سوالف", "category");
       message.guild.createRole({
                   name: "✵- Owner",
                     color: "#000000",
