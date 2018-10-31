@@ -51,6 +51,7 @@ if(message.author.bot) return;
     if(message.content === prefix + 'role') {
                          if(!message.channel.guild) return message.channel.send('**._.**'); 
          if(!message.member.hasPermission('MANAGE_ROLES')) return    message.channel.send('**ماعند البرمشن المطلوب**').then(msg => msg.delete(6000))
+                message.guild.createChannel("𝑻𝑬𝑿𝑻𝑺 - سوالف", "category");
       message.guild.createRole({
                   name: "✵- Owner",
                     color: "#000000",
